@@ -1,0 +1,60 @@
+RewriteEngine On
+
+# --------------------------------------------------
+# Disallow .htaccess
+# --------------------------------------------------
+
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# --------------------------------------------------
+# Basic security headers
+# --------------------------------------------------
+
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+    Header set Expires 0
+    Header set Cache-Control "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+    Header set Pragma "no-cache"
+</IfModule>
+
+
+# --------------------------------------------------
+# Path traversal protection
+# --------------------------------------------------
+
+RewriteCond %{THE_REQUEST} \.\.[/\\] [NC]
+RewriteRule ^ - [F,L]
+
+RewriteCond %{THE_REQUEST} (%2e%2e|%252e%252e|%c0%ae%c0%ae) [NC]
+RewriteRule ^ - [F,L]
+
+
+# --------------------------------------------------
+# Redirect to sign in
+# --------------------------------------------------
+
+RewriteRule ^$ /sign_in [R=302,L,NE]
+
+# --------------------------------------------------
+# No php extensions in url
+# --------------------------------------------------
+
+RewriteRule ^sign_in$ sign_in.php [L]
+RewriteRule ^check_login$ check_login.php [L]
+
+
+# --------------------------------------------------
+# No direct access to php files
+# --------------------------------------------------
+
+RewriteCond %{THE_REQUEST} \s/[^?]*\.php[\s?] [NC]
+RewriteRule ^ - [F,L]
+
+
+# --------------------------------------------------
+# No access to other directiories
+# --------------------------------------------------
+
+RewriteRule ^(results|temp)/ - [F,L]

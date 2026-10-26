@@ -1,0 +1,19 @@
+services:
+
+  captive:
+    build:
+      context: .
+    ports:
+      - "8664:80"
+
+    volumes:
+      - ../self_hosted_captive_portal/captive_portal:/var/www/html
+      - ../self_hosted_captive_portal/logs:/tmp/logs
+
+  redirector:
+    build:
+      context: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ../redirector_on_vps:/var/www/html

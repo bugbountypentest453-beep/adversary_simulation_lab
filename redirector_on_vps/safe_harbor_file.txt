@@ -1,0 +1,54 @@
+================================================================================
+                    AUTHORIZED SECURITY ASSESSMENT
+                         RED TEAM ENGAGEMENT
+================================================================================
+
+This server infrastructure is part of an AUTHORIZED and CONTRACTED security
+assessment conducted with full legal permission for ....
+
+CLIENT:
+ENGAGEMENT TYPE: Red Team Assessment / Phishing Simulation
+AUTHORIZATION DATE:
+ENGAGEMENT PERIOD:
+SCOPE: Authorized phishing simulation testing employee security awareness
+
+AUTHORIZED BY:
+- Name:
+- Position:
+- Company:
+- Email:
+
+TESTING TEAM:
+- Lead:
+- Company:
+- Email:
+- Phone:
+
+EMERGENCY CONTACT (24/7):
+- Primary:
+- Secondary:
+
+
+IMPORTANT NOTES:
+- This is NOT a malicious activity
+- All activities are documented and approved
+- No actual credentials are compromised
+- Testing is limited to authorized scope
+- Data collected will be deleted after assessment
+
+If you have received this file due to an incident investigation or
+automated detection, please contact the emergency contact above
+BEFORE taking any action.
+
+For hosting providers: This is legitimate security testing.
+Please do not suspend or take down this infrastructure without
+contacting the parties listed above first.
+
+VERIFICATION:
+To verify authenticity of this engagement, contact:
+- Client contact:
+
+Date of creation:
+Last updated:
+
+================================================================================
